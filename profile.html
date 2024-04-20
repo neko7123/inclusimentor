@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+            font-family: 'Comfortaa', cursive;
+            font-weight: bold;
+            color: #fff;
+            background: rgb(0, 0, 0);
+            scroll-behavior: smooth;
+        }
+
+        #header {
+            text-align: center;
+            width: 100%;
+            padding: 4% 0;
+            position: fixed;
+            background: #000;
+            z-index: 999;
+            transition: 0.6s ease-in-out;
+            top: 0; /* Make sure the header is at the top initially */
+        }
+
+        /* Add a class to shrink the header */
+        #header.shrink {
+            padding: 2% 0; /* Adjust the padding as needed */
+        }
+
+        #title {
+            font-size: 40px;
+            background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 500% 500% !important;
+            -webkit-animation: Gradient 20s ease infinite;
+            -moz-animation: Gradient 20s ease infinite;
+            -o-animation: Gradient 20s ease infinite;
+            animation: Gradient 20s ease infinite;
+        }
+
+        #dashboard, #match-dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding-top: 250px; /* Adjusted padding to prevent overlap */
+        }
+
+        #profile-info,
+        #profile-picture {
+            width: 40%;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        #profile-picture {
+            text-align: center;
+        }
+
+        #profile-picture img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; /* Circular format */
+        }
+
+        #profile-info h2,
+        #profile-picture h2, #Mentor-Mentee-info h2 {
+            font-size: 40px;
+            background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 500% 500% !important;
+            -webkit-animation: Gradient 20s ease infinite;
+            -moz-animation: Gradient 20s ease infinite;
+            -o-animation: Gradient 20s ease infinite;
+            animation: Gradient 20s ease infinite;
+        }
+        
+        #Mentor-Mentee-info {
+            width: 50%;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        #footer {
+            width: 100%;
+            padding: 10vh 0;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #footer a {
+            font-size: 18px;
+            background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 500% 500% !important;
+            -webkit-animation: Gradient 20s ease infinite;
+            -moz-animation: Gradient 20s ease infinite;
+            -o-animation: Gradient 20s ease infinite;
+            animation: Gradient 20s ease infinite;
+            text-decoration: none;
+        }
+
+        #logout {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
+        ::placeholder {
+            color: #fff;
+        }
+
+        @media (max-width: 900px) {
+            #header {
+                width: 94%;
+                padding: 15% 3%;
+            }
+
+            #title {
+                font-size: 30px;
+            }
+
+            #dashboard {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #profile-info,
+            #profile-picture {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <div id="title">Welcome to Your Profile Dashboard</div>
+    </div>
+
+    <div id="dashboard">
+        <div id="profile-picture">
+            <h2>Your Profile Picture</h2>
+            <img src="path/to/your/profile-picture.jpg" alt="Profile Picture">
+        </div>
+
+        <div id="profile-info">
+            <h2>Your Profile Information</h2>
+            <p><strong>Full Name:</strong> John Doe</p>
+            <p><strong>Username:</strong> johndoe123</p>
+            <p><strong>Bio:</strong> A passionate individual seeking mentorship.</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Pronouns:</strong> He/Him</p>
+            <p><strong>Age:</strong> 25</p>
+            <p><strong>Educational Institution:</strong> University of Example</p>
+            <p><strong>Email ID:</strong> johndoe@example.com</p>
+        </div>
+    </div>
+
+    <div id="match-dashboard">
+        <div id="Mentor-Mentee-info">
+        <h2>Your Mentor/Mentee info</h2>
+        <p><strong>Full Name:</strong> Jack Dove</p>
+        <p><strong>Bio:</strong> A passionate mentor</p>
+        <p><strong>Gender:</strong> Male</p>
+        <p><strong>Pronouns:</strong> He/Him</p>
+        <p><strong>Age:</strong> 25</p>
+        <p><strong>Organisation:</strong> Pride circle</p>
+        <p><strong>Email ID:</strong> Jackdove@pridecircle.in</p>
+        </div>
+    </div>
+
+    <div id="logout"><button class="btn_one">Logout</button></div>
+
+    <div id="footer">
+        Unlock Your Potential in an Inclusive Community <br><br> 
+        <a href="https://imfunniee.github.io" class="footer-link">Made as a part of YCFP 2023 Program</a>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script>
+        // Add an event listener to handle scroll
+        window.addEventListener("scroll", function() {
+            var header = document.getElementById("header");
+
+            // Add the 'shrink' class when the scroll position is greater than 0
+            if (window.scrollY > 0) {
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+    </script>
+</body>
+</html>
